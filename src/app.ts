@@ -1,2 +1,1 @@
-/// <reference path="../typings/tsd.d.ts" />
-import Rx = require('rx');
+import * as ionic from './seed';

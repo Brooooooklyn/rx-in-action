@@ -1,18 +1,15 @@
 {
-  "version": "1.6.2",
+  "version": "1.7.3",
   "compilerOptions": {
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "target": "es5",
-    "module": "commonjs",
+    "experimentalAsyncFunctions": true,
+    "target": "ES6",
+    "module": "umd",
     "declaration": false,
     "noImplicitAny": false,
     "removeComments": true,
     "noLib": false,
     "outDir": "www/js/"
-  },
-  "exclude": [
-    "node_modules",
-    "node_modules/@reactivex/rxjs"
-  ]
+  }
 }
