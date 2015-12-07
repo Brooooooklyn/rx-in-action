@@ -1,1 +1,1 @@
-import * as ionic from './seed';
+import * as rx from '@reactivex/rxjs';
