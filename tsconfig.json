@@ -1,15 +1,10 @@
 {
-  "version": "1.7.3",
+  "version": "1.7.5",
   "compilerOptions": {
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "experimentalAsyncFunctions": true,
-    "target": "ES5",
-    "module": "commonjs",
-    "declaration": false,
-    "noImplicitAny": false,
-    "removeComments": true,
-    "noLib": false
+    "target": "es6",
+    "module": "commonjs"
   },
   "exclude": [
     "node_modules"

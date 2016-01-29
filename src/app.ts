@@ -1,1 +1,3 @@
-import * as rx from '@reactivex/rxjs';
+import * as rx from 'rxjs-es/Rx'
+
+
