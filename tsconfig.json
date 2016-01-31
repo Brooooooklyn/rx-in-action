@@ -1,5 +1,5 @@
 {
-  "version": "1.7.5",
+  "version": "1.8.0",
   "compilerOptions": {
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
@@ -7,7 +7,8 @@
     "module": "commonjs"
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "tools/build"
   ],
   "compileOnSave": false
 }

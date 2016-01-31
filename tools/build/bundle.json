@@ -1,0 +1,22 @@
+{
+  "version": "1.8.0",
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es6",
+    "module": "commonjs",
+    "declaration": false,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "noLib": false
+  },
+  "files" : [
+    "./typings.d.ts",
+    "../typings/node/node.d.ts",
+    "../../node_modules/rxjs-es/Rx.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "compileOnSave": false
+}
