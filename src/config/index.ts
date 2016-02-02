@@ -1,1 +1,1 @@
-export const apiHost = 'https://api.teambition.com/'
+export const apiHost = 'https://api.teambition.com'

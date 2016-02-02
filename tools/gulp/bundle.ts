@@ -5,7 +5,7 @@ import webpackConfig from '../../webpack.config'
 
 const webpack = require('webpack')
 
-export default (minify?: boolean) => {
+export const bundle = (minify?: boolean, cb?: Function) => {
   if (minify) {
     webpackConfig.plugins.push(new webpack.optimize.UglifyJsPlugin({
       mangle: {
@@ -13,13 +13,17 @@ export default (minify?: boolean) => {
       }
     }))
   }
+  return webpack(webpackConfig, (err, status) => {
+    if (err) {
+      throw new gutil.PluginError('webpack', err)
+    }
+    gutil.log(gutil.colors.cyan('[webpack]', status.toString()))
+    if (typeof cb === 'function') return cb()
+  })
+}
+
+export default (minify?: boolean) => {
   return new Promise((resolve, reject) => {
-    webpack(webpackConfig, (err, status) => {
-      if (err) {
-        throw new gutil.PluginError('webpack', err)
-      }
-      gutil.log(gutil.colors.cyan('[webpack]', status.toString()))
-      resolve()
-    })
+    bundle(minify, resolve)
   })
 }

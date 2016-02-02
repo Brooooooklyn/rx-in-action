@@ -9,9 +9,11 @@ const cssImport    = require('postcss-import')
 const imageName = 'images/[name].[ext]'
 
 export default {
-  entry: [
-    path.join(process.cwd(), 'src/app.ts')
-  ],
+  entry: {
+    app: [
+      path.join(process.cwd(), 'src/index.ts')
+    ]
+  },
   output: {
     filename: 'js/bundle.js',
     path: path.join(process.cwd(), 'www/')
