@@ -13,7 +13,7 @@
   "files" : [
     "./typings.d.ts",
     "../typings/node/node.d.ts",
-    "../../node_modules/rxjs-es/Rx.d.ts"
+    "../../node_modules/rxjs/Rx.d.ts"
   ],
   "exclude": [
     "node_modules"

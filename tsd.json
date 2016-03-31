@@ -6,7 +6,10 @@
   "bundle": "tools/typings/tsd.d.ts",
   "installed": {
     "node/node.d.ts": {
-      "commit": "7577a2f4c134790891c52affdacdae99d802571b"
+      "commit": "e937b3e64af586d19f2ea29fdf771e9dc4feecc8"
+    },
+    "whatwg-fetch/whatwg-fetch.d.ts": {
+      "commit": "e937b3e64af586d19f2ea29fdf771e9dc4feecc8"
     }
   }
 }

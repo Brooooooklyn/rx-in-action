@@ -1,6 +1,5 @@
-import * as rx from 'rxjs-es/Rx'
-import {apiHost} from './config'
+'use strict'
 
-export default fetch(`${apiHost}/users/me`).then((data) => {
-  console.log(data)
-})
+import {Fetch} from './fetch'
+
+const fetching = new Fetch()
