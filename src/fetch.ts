@@ -1,7 +1,7 @@
 'use strict'
 import {forEach, assign} from './utils'
 
-require('isomorphic-fetch')
+// require('isomorphic-fetch')
 
 const apiPath = ['Version', 'Type', 'Id', 'Path1', 'Path2', 'Path3']
 
@@ -21,13 +21,12 @@ export class Fetch {
 
   private static opts: any = {
     headers: {
-      'Accept': 'application/json',
       'Content-Type': 'application/json'
     },
     credentials: 'include'
   }
 
-  private static apiHost = 'https://www.teambition.com/api'
+  private static apiHost = 'http://project.ci/api'
 
   public static setAPIHost(host: string) {
     Fetch.apiHost = host
@@ -35,8 +34,8 @@ export class Fetch {
 
   public static setToken(token: string) {
     delete Fetch.opts.credentials
-    Fetch.opts.headers.Authorization = `OAuth2 ${token}`
-    Fetch.apiHost = 'https://api.teambition.com'
+    Fetch.opts.headers['Authorization'] = `OAuth2 ${token}`
+    Fetch.apiHost = 'http://api.project.ci'
   }
 
   get(paths: IRestPaths) {
@@ -81,7 +80,7 @@ export class Fetch {
     })
   }
 
-  private buildURI(path: IRestPaths) {
+  private buildURI(path: IRestPaths, apiHost?: string) {
     let uris = []
     let querys = []
     forEach(path, (val: string, key: string) => {
@@ -96,7 +95,7 @@ export class Fetch {
     if (typeof version !== 'undefined') {
       uris[0] = `/${version}`
     }
-    let url = Fetch.apiHost + uris.join('/')
+    let url = apiHost ? apiHost + uris.join('/') : Fetch.apiHost + uris.join('/')
     url = querys.length ? url + '?' + querys.join('&') : url
     return url
   }

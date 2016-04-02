@@ -1,1 +1,3 @@
 export const apiHost = 'http://api.project.ci'
+
+export const token = '_rQpC96KbCEl0-7MS2wgINlBLs0=SpvrhtfK0f9caad1bdb99fb69b1a3cfd8675116cf31d569f73fa15efb04a3b5fca95ab2e9117931c71cc920abea1345aae6115069757255e10bf34218f43a2ddfa15beb9f2b5aa9f8c9ffbf0bee4512e972190ba29ac72fa1aff4db00c025819af6fb11a'
